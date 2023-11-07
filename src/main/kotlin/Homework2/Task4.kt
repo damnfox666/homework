@@ -3,19 +3,21 @@ package Homework2
 fun main() {
     var sum = 0
     println("Введите команду: ")
-    var com = readln()
-    while (com != "exit") {
-        when (com) {
+    var command = readln()
+    while (command != "exit") {
+        when (command) {
             "increase" -> sum += 1
             "decrease" -> sum -= 1
 
             else -> {
                 println("Команда не распознана, введите еще раз: ")
-                com = readln()
+                command = readln()
             }
         }
-        println("Успешно, введите команду: ")
-        com = readln()
+        if (command != "exit") {
+            println("Успешно, введите команду: ")
+            command = readln()
+        }
     }
     println("Сумма: $sum")
 }
