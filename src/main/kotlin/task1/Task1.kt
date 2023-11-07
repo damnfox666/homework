@@ -6,10 +6,12 @@ fun main() {
     println("Привет $name")
     println("Введите число от 1 до 3: ")
     var number = 0
-
-    while (number != 1 && number != 2 && number != 3) {
-        number = readln().toInt()
-        println("Некоретное число, введите еще раз:")
+    number = readln().toInt()
+    if (number != 1 && number != 2 && number != 3) {
+        while (number != 1 && number != 2 && number != 3) {
+            println("Некоретное число, введите еще раз:")
+            number = readln().toInt()
+        }
     }
     println("Введите ставку: ")
     val stavka = readln().toInt()
@@ -17,5 +19,5 @@ fun main() {
 
     if (numb == number)
         println("Вы выиграли " + stavka * 3)
-     else println("Вы проиграли, лох ")
+    else println("Вы проиграли, лох ")
 }
