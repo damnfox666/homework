@@ -8,10 +8,11 @@ fun main() {
         when (com) {
             "increase" -> sum += 1
             "decrease" -> sum -= 1
-        }
-        while (com != "increase" && com != "decrease") {
-            println("Команда не распознана, введите еще раз: ")
-            com = readln()
+
+            else -> {
+                println("Команда не распознана, введите еще раз: ")
+                com = readln()
+            }
         }
         println("Успешно, введите команду: ")
         com = readln()
