@@ -1,4 +1,4 @@
-package Homework2
+package homework2
 
 fun main() {
     var sum = 0
