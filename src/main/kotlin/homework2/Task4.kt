@@ -1,25 +1,21 @@
 package homework2
 
 fun main() {
+    var command: String = ""
     var sum = 0
-    println("Введите команду: ")
-    var command = readln()
+
     while (command != "exit") {
+        println("Введите команду: ")
+        command = readln()
         when (command) {
             "increase" -> sum += 1
             "decrease" -> sum -= 1
+            "exit" -> println("Сумма: $sum")
 
-            else -> {
-                println("Команда не распознана, введите еще раз: ")
-                command = readln()
-            }
-        }
-        if (command != "exit") {
-            println("Успешно, введите команду: ")
-            command = readln()
+            else -> println("Команда не распознана ")
         }
     }
-    println("Сумма: $sum")
+
 }
 //в проекте с домашкой в новом пакете homework2 создать файл и в нем решить задачу:
 //Имеется переменная типа int с начальным значением 0. Пользователю предлагается
